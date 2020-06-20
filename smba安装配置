@@ -14,4 +14,9 @@
 3、 添加用户zh7152106到samb
     smbpasswd -a zh7152106
 
-4、 在windows上测试是否正常，注意关闭防火墙   
+4、 重启samba
+    sudo service smbd restart
+    或者
+    sudo /etc/init.d/smbd restart
+
+5、 在windows上测试是否正常，注意关闭防火墙   
