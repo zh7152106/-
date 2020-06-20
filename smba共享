@@ -1,0 +1,17 @@
+1、 安装samb
+2、 配置samb配置文件/etc/samba/smbd.conf
+    添加如下内容到文件中
+    [zh7152106]
+        comment = zh7152106
+        browseable = yes
+        path = /home/zh7152106/
+        writable = yes
+        read only = no
+        create mask = 0700
+        directory mode = 0700
+        valid user = zh7152106
+        
+3、 添加用户zh7152106到samb
+    smbpasswd -a zh7152106
+
+4、 在windows上测试是否正常，注意关闭防火墙   
